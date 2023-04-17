@@ -1,38 +1,475 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-size: 1.6rem;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: .5rem 0;
+  position: relative;
+}
+
+.logo img {
+  width: 15rem;
+}
+
+.menu {
+  display: flex;
+  gap: .5rem;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: .5rem;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.menu a:hover {
+  color: rgb(35, 42, 82);
+}
+
+/* seção capa */
+.capa {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(47deg, #000113 0%, #04061d 80%, #04061d 100%);
+  background-image: url('/public/assets/capa.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.limitar-secao {
+  margin-left: 25rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  font-family: 'anybody', cursive;
+}
+
+.limitar-secao p {
+  font-size: 3.6rem;
+  color: rgb(196, 196, 196);
+}
+
+.limitar-secao h1 {
+  font-size: 6rem;
+  color: #fff;
+  margin: 0;
+  letter-spacing: .1rem;
+  line-height: 7rem;
+}
+
+/* seção produtos */
+.secaoProdutos {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 10rem 2rem;
+}
+
+.secaoProdutos ul li {
+  list-style-position: inside;
+}
+
+.grupoProdutos {
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+
+}
+
+.textProdutos h3 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+.textProdutos p {
+  line-height: 3rem;
+}
+
+.listProdutos {
+  line-height: 3rem;
+}
+
+.listProdutos p {
+  margin-bottom: 2rem;
+}
+
+/* cards */
+.allCards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 5rem 0;
+}
+
+.card {
+  background-color: #f6f6f6;
+  text-align: center;
+  width: calc(50% - 1.5rem);
+  padding: 2rem 1rem;
+
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 3.2rem;
+}
+
+.card img {
+  width: 80%;
+  max-height: 15rem;
+  margin: 3rem auto;
+}
+
+.preco {
+  margin: 0;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+/* seção sobre */
+.secaoSobre {
+  background-color: #F8F7FF;
+  padding: 10rem 2rem;
+  text-align: center;
+}
+
+.conteudoSobre {
+  width: 67%;
+  margin: auto;
+}
+
+.textSobre p {
+  line-height: 3.2rem;
+}
+
+.allCardSobre {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 5rem;
+}
+
+.cardSobre {
+  width: 50%;
+
+  max-height: 30rem;
+  border: solid 1px #a2adad;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+
+  background-color: #fff;
+}
+
+.cardSobre img {
+  max-height: 30rem;
+}
+
+.cardSobre.text {
+  padding: 2rem 2.5rem;
+}
+
+.cardSobre h3 {
+  font-size: 3.6rem;
+  font-family: 'anybody', 'cursive';
+  letter-spacing: .5rem;
+  line-height: 4.2rem;
+}
+
+.cardSobre p {
+  font-size: 2.2rem;
+  color: #4a4a4a;
+}
+
+/* secao contato */
+.secaoContato {
+  width: 100%;
+  /* text-align: center; */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  color: #fff;
+
+  padding: 10rem 2rem;
+  background-color: #05031b;
+
 }
 
-.App-link {
-  color: #61dafb;
+.conteudoContato {
+  margin: auto;
+  width: 67%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fale-conosco {
+  text-align: center;
+}
+
+.fale-conosco h2 {
+  margin-bottom: 2rem;
+}
+
+.redesContato {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+
+}
+
+.redesContato p {
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+
+.redesContato img {
+  width: 1.8rem;
+}
+
+.redesContato ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2.5rem;
+}
+
+.redesContato a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listaContato,
+.listaSocial {
+  padding: 2rem;
+}
+
+.rodape {
+  color: #ADADAD;
+  padding: 2rem;
+  background-color: #030303;
+  text-align: center;
+}
+
+@media (max-width:570px) {
+
+  /* smartphones, Android phones, landscape iPhone */
+
+
+
+}
+
+
+
+
+
+@media (max-width:1025px) {
+  .limitar-secao {
+    margin: auto 10rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .capa {
+
+    background-image: none;
+    position: relative;
+  }
+
+  .capa::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/assets/capa.png');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: -1;
+  }
+
+
+
+
+
+
+
+  .secaoProdutos {
+    margin: auto;
+
+  }
+
+  .grupoProdutos {
+    width: 95%;
+  }
+
+
+  .conteudoSobre {
+    width: 90%;
+  }
+
+  .cardSobre h3 {
+    font-size: 2.5rem;
+  }
+
+  .cardSobre p {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width:700px) {
+  .limitar-secao {
+    margin-left: 2rem;
+  }
+
+  .cardSobre h3 {
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    line-height: 2rem;
+  }
+
+  .cardSobre p {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width:550px) {
+  nav {
+    flex-direction: column;
+    gap: .3rem;
+  }
+
+  .logo {
+    border-bottom: 1px solid rgb(158, 158, 158);
+    width: 90%;
+    text-align: center;
+  }
+
+
+
+  .capa::before {
+    background-position: right;
+    filter: brightness(.3);
+  }
+
+  .limitar-secao {
+    width: 60%;
+    margin: 0;
+  }
+
+  .limitar-secao p {
+    font-size: 1.4rem;
+  }
+
+  .limitar-secao h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+
+
+
+  .secaoProdutos {
+    padding: 10rem 0;
+  }
+
+  .grupoProdutos {
+    padding: 2rem 0;
+  }
+
+  .allCards {
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .card {
+    width: 100%;
+    margin: auto;
+  }
+
+
+
+
+
+
+  .secaoSobre {
+    padding: 10rem 0;
+
+  }
+
+  .allCardSobre {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+
+  }
+
+  .cardSobre {
+    width: 100%;
+    height: 29rem;
+    max-height: 30rem;
+  }
+
+  .cardSobre img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .redesContato {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:340px) {
+  .limitar-secao {
+    width: 100%;
+  }
+
+  .secaoContato {
+    padding: 10rem 0;
   }
 }
